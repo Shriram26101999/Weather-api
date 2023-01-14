@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your present Weather:</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+     *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ color: white;
+ background-color: black;
+}
+
+#primary{
+    background-color: black;
+    color: rgb(240, 238, 238);
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#primary > div{
+    position: relative;
+    top: 10%;
+    font-size: 70px;
+    font-weight: 700;
+}
+
+#primary-1st-main{
+    position: absolute;
+    margin: 100px;
+    left: 0;
+    font-size: 30px;
+    font-weight: 400;
+    top: 30%;
+}
+#primary-1st-2ndmain{
+    position: absolute;
+    margin: 100px;
+    right: 0;
+    font-size: 30px;
+    font-weight: 400;
+    top: 30%;
+}
+
+#Google-map{
+    position: absolute;
+    top: 50%;
+    width: 1300;
+    height: 1000;
+}
+
+#fetchDataBtn{
+    position: relative;
+    top: 30%;
+    width: 300px;
+    height: 30px;
+    /* color: white */
+    border: 1px solid white;
+    background-color: black;
+    
+}
+
+#secondary-main{
+    position: relative;
+    top: 50px;
+    left: 40px;
+    font-size: 70px;
+    font-weight: 700;
+}
+
+#info-Sheet{
+    position: relative;
+    top: 100px;
+    left: 40px;
+    border: 2px solid rgb(243, 5, 5);
+    height: 90vh;
+    width: 94vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 150px;
+}
+
+#info-Sheet > div{
+    margin-left: 40px;
+}
+
+.max{
+    position: relative;
+    margin-left: 500px ;
+}
+
+.borderbb{
+    border-bottom: 2px solid red;
+
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div id="primary"> 
+        <!-- upperDiv -->
+        <div class="borderbb">
+            Weather Api
+        </div>
+        <button type="submit" id="fetchDataBtn">
+            Fetch Data
+        </button>
+
+        <div id="primary-1st" style="display: none;">
+            <div id="primary-1st-main" class="borderbb" >
+                Latitude:- <span id="prime-Lat"></span>
+            </div>
+
+            <div id="primary-1st-2ndmain" class="borderbb">
+                Longitude:- <span id="prime-Long"></span>
+            </div>
+
+            <div id="Google-map">
+                <iframe src="https://maps.google.com/maps?q=19.15928, 77.310094&z=15&output=embed"  width="1000" height="400"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div id="secondary" style="display: none;"> <!--lowerDiv-->
+
+        <span class="borderbb" id="secondary-main">Weather Data</span>
+        <div id="info-Sheet">
+            <div>
+                Location: <span id="w1"> </span>
+            </div>
+            <div>
+                Latitude: <span id="w2"> </span>
+                <div class="max">
+                    Longitude: <span id="w10"> </span>
+                </div>
+            </div>
+            <div>
+                Time-zone: <span id="w3"> </span> 
+            </div>
+            <div>
+                Speed of Wind: <span id="w4"> </span> 
+            </div>
+            <div>
+                Pressure: <span id="w5"> </span> 
+            </div>
+            <div>
+                Humidity: <span id="w6"> </span> 
+            </div>
+            <div>
+                Direction of wind: <span id="w7"> </span> 
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
