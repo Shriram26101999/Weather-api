@@ -61,7 +61,7 @@ function startFetching() {
     spanLong.textContent = locationDataFinal.longitude
 
     map.src = `https://maps.google.com/maps?q=${locationDataFinal.latitude},${locationDataFinal.longitude}&z=15&output=embed`
-    urlWeatherApi = `https://api.openweathermap.org`
+   urlWeatherApi = `https://api.openweathermap.org/data/2.5/weather?lat=${locationDataFinal.latitude}&lon=${locationDataFinal.longitude}&units=metric&appid=2e88e1bf8a9c2560aac08ab701cfe144`
     getWeatherReport()
 }
 
