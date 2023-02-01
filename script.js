@@ -1,10 +1,10 @@
 var fetchDataBtn = document.getElementById("fetchDataBtn")
 var primary = document.getElementById("primary")
 var secondary = document.getElementById("secondary")
-var primary-1st = document.getElementById("primary-1st")
-var prime-Lat = document.getElementById("prime-Lat")
-var prime-Long = document.getElementById("prime-Long")
-var Google-map = document.getElementsByTagName("iframe")[0]
+var primary1st = document.getElementById("primary-1st")
+var primeLat = document.getElementById("prime-Lat")
+var primeLong = document.getElementById("prime-Long")
+var Googlemap = document.getElementsByTagName("iframe")[0]
 
 var infoSheet1 = document.getElementById("infoSheet1")
 var infoSheet2 = document.getElementById("infoSheet2")
@@ -52,10 +52,10 @@ function getWeatherReport() {
 function startFetching() {
     primary.style.height = "110vh"
     fetchDataBtn.style.display = 'none'
-    primary-1st.style.display = 'contents'
+    primary1st.style.display = 'contents'
     secondary.style.display = 'contents'
-    prime-Lat.textContent = locationDataFinal.latitude
-    prime-Long.textContent = locationDataFinal.longitude
+    primeLat.textContent = locationDataFinal.latitude
+    primeLong.textContent = locationDataFinal.longitude
 
     map.src = `https://maps.google.com/maps?q=${locationDataFinal.latitude},${locationDataFinal.longitude}&z=15&output=embed`
     urlWeatherApi = ``
