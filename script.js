@@ -16,7 +16,9 @@ var infoSheet7 = document.getElementById("infoSheet7")
 var infoSheet8 = document.getElementById("infoSheet8")
 
 
-var urlLocation = "" //ipegweatherapi-create
+var urlLocation = "https://api.ipgeolocation.io/ipgeo?apiKey=7bf6f321bb3643b797fb0e912fab013b" //https://api.ipgeolocation.io/ipgeo?apiKey=5fb4f358a5924c22bf0d8751b28aec7c
+
+
 var urlWeatherApi;
 
 var locationDataFinal;
@@ -58,7 +60,8 @@ function startFetching() {
     primeLong.textContent = locationDataFinal.longitude
 
     map.src = `https://maps.google.com/maps?q=${locationDataFinal.latitude},${locationDataFinal.longitude}&z=15&output=embed`
-    urlWeatherApi = ``
+    urlWeatherApi = `https://api.openweathermap.org/data/2.5/weather?lat=${locationDataFinal.latitude}&lon=${locationDataFinal.longitude}&units=metric&appid=fd17614b5d9290b88149714e7a7013af`
+    // urlWeatherApi = `https://api.openweathermap.org/data/2.5/weather?lat=${locationDataFinal.latitude}&lon=${locationDataFinal.longitude}&appid=2e88e1bf8a9c2560aac08ab701cfe144`
     getWeatherReport()
 }
 
